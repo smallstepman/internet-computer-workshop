@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "ic_hello_orthogonal_persistance": {
+      "main": "src/ic_hello_orthogonal_persistance/main.mo",
+      "type": "motoko"
+    },
+    "ic_hello_orthogonal_persistance_assets": {
+      "dependencies": [
+        "ic_hello_orthogonal_persistance"
+      ],
+      "frontend": {
+        "entrypoint": "src/ic_hello_orthogonal_persistance_assets/src/index.html"
+      },
+      "source": [
+        "src/ic_hello_orthogonal_persistance_assets/assets",
+        "dist/ic_hello_orthogonal_persistance_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}

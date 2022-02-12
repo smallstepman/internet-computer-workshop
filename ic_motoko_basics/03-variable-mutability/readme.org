@@ -1,0 +1,14 @@
+#+TITLE: Variables and State
+
+
+#+begin_src bash :exports both :results output
+moc main.mo --package base ../motoko-base/src/ -r
+#+end_src
+
+#+RESULTS:
+: abcxyzxyz
+:
+: abcxyzxyz
+: abcxyzxyz
+: abcxyzxyzxyz
+:

@@ -1,0 +1,58 @@
+#+TITLE: Readme
+
+#+begin_src bash :exports both :results output
+moc main.mo --package base ../motoko-base/src/ -r
+#+end_src
+
+#+RESULTS:
+#+begin_example
+
+simple counter actor
+0
+()
+1
+
+assign actor to variable
+()
+()
+
+passing actor as param to function
+3
+3
+3
+
+passing actor as param to function, then calling it
+5
+
+constructing actor with param passed to function
+55
+
+can't make it work -- actor wrapped with class
+
+actor with class declaration
+-1
+
+can't make it work -- actor with class declaration - trying to use declared class outside of the actor
+
+object wrapped with actor
+1
+15
+
+actor with class inside - proxy wrapped by object (class has only immutable fields)
+{q = 2}
+0
+888
+
+actor with class inside - proxy wrapped by object (class has mutable fields)
+2
+22
+33
+11
+
+actor with malicious query func
+0
+3
+
+actor classes
+(1, 2)
+#+end_example

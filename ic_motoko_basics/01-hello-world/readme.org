@@ -1,0 +1,24 @@
+#+TITLE: Hello World
+
+#+begin_src sh :results output :exports both
+moc main.mo --package base ../motoko-base/src/ -v -r
+#+end_src
+
+#+RESULTS:
+#+begin_example
+-- Parsing main.mo:
+-- Parsing ../motoko-base/src/Debug.mo:
+-- Parsing prim:
+-- Checking @prim:
+-- Definedness @prim:
+-- Checking Debug.mo:
+-- Definedness Debug.mo:
+-- Checking main.mo:
+-- Definedness main.mo:
+-- Interpreting @prim:
+-- Interpreting Debug.mo:
+-- Interpreting main.mo:
+Hello, World!
+Hello, Earth!
+("hello", 42, "world")
+#+end_example

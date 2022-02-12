@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "ic_hello_imports": {
+      "main": "src/ic_hello_imports/main.mo",
+      "type": "motoko"
+    },
+    "ic_hello_imports_assets": {
+      "dependencies": [
+        "ic_hello_imports"
+      ],
+      "frontend": {
+        "entrypoint": "src/ic_hello_imports_assets/src/index.html"
+      },
+      "source": [
+        "src/ic_hello_imports_assets/assets",
+        "dist/ic_hello_imports_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}

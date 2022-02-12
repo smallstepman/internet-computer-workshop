@@ -1,0 +1,33 @@
+#+TITLE: Errors
+
+
+#+begin_src bash :exports both :results output
+echo $(moc trap.mo --package base ../motoko-base/src/ -r 2>&1)
+#+end_src
+
+#+RESULTS:
+: prim:55.31-55.42: execution error, explicit trap: whooopsies
+
+
+#+begin_src bash :exports both :results output
+moc main.mo --package base ../motoko-base/src/ -r
+#+end_src
+
+#+RESULTS:
+#+begin_example
+
+try-catching erronouse actor function inside another actors' function
+"system_fatal"
+()
+
+try-catching erronouse actor function outside of actor
+"system_fatal"
+
+working with Option
+null
+
+working with Result
+"broken"
+#+end_example
+
+- trap is a non-recoverable runtime failure caused by, for example, division-by-zero, out-of-bounds array indexing, numeric overflow, cycle exhaustion or assertion failure.

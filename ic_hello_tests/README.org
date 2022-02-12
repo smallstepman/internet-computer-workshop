@@ -1,0 +1,19 @@
+* ic_hello_tests
+#+begin_src shell
+dfx start --background
+dfx deploy
+dfx canister call ic_hello_test test
+#+end_src
+
+#+begin_example
+(
+    "greet me" succeeded.
+    "greet him-whose-name-shall-not-be-spoken" failed: Should've failed, but didn't
+    "greet Claudio" failed: "Hello, Claudio!" was expected to be "Hello, Karl!"
+    "greet Joachim" failed: Should've failed, but didn't
+    Failure! 1/4 succeeded."
+)
+#+end_example
+
+
+- based on: https://github.com/kritzcreek/ic101

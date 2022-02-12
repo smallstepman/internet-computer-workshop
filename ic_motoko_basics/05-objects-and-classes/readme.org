@@ -1,0 +1,48 @@
+#+TITLE: Readme
+
+#+begin_src bash :exports both :results output
+moc main.mo --package base ../motoko-base/src/ -r
+#+end_src
+
+#+RESULTS:
+#+begin_example
+
+objects - mutable, local-only
+0
+0
+1
+1
+2
+2
+0
+
+class definition inside an object
+877
+878
+877
+
+object inside a class
+0
+9
+10
+
+1
+0
+9
+13
+10
+
+function spawning objects (mimics functionality of scenario where object is wrapped in class)
+1
+
+class constructor
+11
+16
+
+class type aguments aka generics
+"hello"
+3
+
+class type annotations aka class traits
+3
+#+end_example

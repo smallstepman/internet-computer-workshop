@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "ic_hello": {
+      "main": "src/ic_hello/main.mo",
+      "type": "motoko"
+    },
+    "ic_hello_test": {
+      "dependencies": [
+        "ic_hello"
+      ],
+      "main": "test/Test.mo",
+      "type": "motoko"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": "vessel sources"
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
